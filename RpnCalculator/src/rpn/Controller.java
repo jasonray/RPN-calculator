@@ -1,9 +1,13 @@
 package rpn;
 
-import java.util.Stack;
+import rpn.operator.AddOperator;
+import rpn.operator.FactorialOperator;
+import rpn.operator.Operator;
+import rpn.operator.SubtractionOperator;
+
 
 public class Controller {
-	private Stack<Integer> numbers = new Stack<Integer>();
+	private RpnStack numbers = new RpnStack();
 
 	public void enter(Integer operand) {
 		numbers.push(operand);
@@ -11,13 +15,13 @@ public class Controller {
 
 	public int perform(String string) {
 		int result = 0;
-		Operation operation = null;
+		Operator operation = null;
 		if (string.contentEquals("+")) {
-			 operation = new AddOperation();
+			 operation = new AddOperator();
 		} else if (string.contentEquals("-")) {
-			 operation = new SubtractionOperation();
+			 operation = new SubtractionOperator();
 		} else if (string.contentEquals("!")) {
-			 operation = new FactorialOperation();
+			 operation = new FactorialOperator();
 		}
 
 		result = operation.doOperation(numbers);

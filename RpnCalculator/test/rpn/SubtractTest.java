@@ -19,7 +19,16 @@ public class SubtractTest {
 		int result = controller.perform("-");
 		assertEquals(-1, result);
 	}
-	
+
+	@Test
+	public void subtractOneNumberTwice() {
+		Controller controller = new Controller();
+		controller.enter(1);
+		int result = controller.perform("-");
+		result = controller.perform("-");
+		assertEquals(1, result);
+	}
+
 	@Test
 	public void subtractTwoNumbers() {
 		Controller controller = new Controller();
@@ -28,7 +37,7 @@ public class SubtractTest {
 		int result = controller.perform("-");
 		assertEquals(10, result);
 	}
-	
+
 	@Test
 	public void subtractThreeNumbers() {
 		Controller controller = new Controller();
@@ -36,7 +45,7 @@ public class SubtractTest {
 		controller.enter(13);
 		controller.perform("-");
 		controller.enter(5);
-		
+
 		int result = controller.perform("-");
 		assertEquals(3, result);
 	}
