@@ -7,4 +7,9 @@ public class MultiplyOperator extends BinaryOperation {
 		return lhs * rhs;
 	}
 
+	@Override
+	public boolean handlesOperatorCharacter(String character) {
+		return character.contentEquals("*");
+	}
+
 }

@@ -16,4 +16,9 @@ public class FactorialOperator implements Operator {
 		return total;
 	}
 
+	@Override
+	public boolean handlesOperatorCharacter(String character) {
+		return character.contentEquals("!");
+	}
+
 }

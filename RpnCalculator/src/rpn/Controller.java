@@ -1,5 +1,7 @@
 package rpn;
 
+import java.util.ArrayList;
+
 import rpn.operator.AddOperator;
 import rpn.operator.FactorialOperator;
 import rpn.operator.MultiplyOperator;
@@ -13,20 +15,22 @@ public class Controller {
 		numbers.push(operand);
 	}
 
-	public int perform(String string) {
+	public int perform(String operatorCharacter) {
+
+		ArrayList<Operator> operatorRegistry = new ArrayList<Operator>();
+		operatorRegistry.add(new AddOperator());
+		operatorRegistry.add(new SubtractionOperator());
+		operatorRegistry.add(new MultiplyOperator());
+		operatorRegistry.add(new FactorialOperator());
+
 		int result = 0;
-		Operator operation = null;
-		if (string.contentEquals("+")) {
-			operation = new AddOperator();
-		} else if (string.contentEquals("-")) {
-			operation = new SubtractionOperator();
-		} else if (string.contentEquals("!")) {
-			operation = new FactorialOperator();
-		} else if (string.contentEquals("*")) {
-			operation = new MultiplyOperator();
+		for (Operator operator : operatorRegistry) {
+			if (operator.handlesOperatorCharacter(operatorCharacter)) {
+				result = operator.doOperation(numbers);
+				break;
+			}
 		}
 
-		result = operation.doOperation(numbers);
 		return result;
 
 	}
