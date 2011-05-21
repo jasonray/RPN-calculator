@@ -1,10 +1,10 @@
 package rpn.operator;
 
-public class DivisionOperator extends BinaryOperation {
+public class DivisionOperator extends BinaryOperator {
 
 	@Override
-	public boolean handlesOperatorCharacter(String character) {
-		return character.contentEquals("/");
+	public boolean handlesOperand(String operand) {
+		return operand.contentEquals("/");
 	}
 
 	@Override

@@ -1,6 +1,6 @@
 package rpn.operator;
 
-public class SubtractionOperator extends BinaryOperation {
+public class SubtractionOperator extends BinaryOperator {
 
 	@Override
 	protected int doOperation(int lhs, int rhs) {
@@ -8,8 +8,8 @@ public class SubtractionOperator extends BinaryOperation {
 	}
 
 	@Override
-	public boolean handlesOperatorCharacter(String character) {
-		return character.contentEquals("-");
+	public boolean handlesOperand(String operand) {
+		return operand.contentEquals("-");
 	}
 
 }

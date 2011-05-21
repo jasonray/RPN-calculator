@@ -17,8 +17,8 @@ public class FactorialOperator implements Operator {
 	}
 
 	@Override
-	public boolean handlesOperatorCharacter(String character) {
-		return character.contentEquals("!");
+	public boolean handlesOperand(String operand) {
+		return operand.contentEquals("!");
 	}
 
 }

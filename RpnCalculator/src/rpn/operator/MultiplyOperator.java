@@ -1,6 +1,6 @@
 package rpn.operator;
 
-public class MultiplyOperator extends BinaryOperation {
+public class MultiplyOperator extends BinaryOperator {
 
 	@Override
 	protected int doOperation(int lhs, int rhs) {
@@ -8,8 +8,8 @@ public class MultiplyOperator extends BinaryOperation {
 	}
 
 	@Override
-	public boolean handlesOperatorCharacter(String character) {
-		return character.contentEquals("*");
+	public boolean handlesOperand(String operand) {
+		return operand.contentEquals("*");
 	}
 
 }
