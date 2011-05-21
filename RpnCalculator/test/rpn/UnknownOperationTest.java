@@ -1,14 +1,19 @@
 package rpn;
 
-import static org.junit.Assert.assertEquals;
-
-import org.junit.Ignore;
+import org.junit.Test;
 
 public class UnknownOperationTest {
-	@Ignore
+	@Test(expected = IllegalArgumentException.class)
 	public void unknownOperation() {
 		Controller controller = new Controller();
-		int result = controller.perform("?");
-		assertEquals(0, result);
+		controller.perform("?");
+		// expect error
+	}
+
+	@Test(expected = IllegalArgumentException.class)
+	public void blankOperand() {
+		Controller controller = new Controller();
+		controller.perform(null);
+		// expect error
 	}
 }

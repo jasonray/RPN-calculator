@@ -12,14 +12,23 @@ public class Controller {
 		numbers.push(operand);
 	}
 
-	public int perform(String operatorCharacter) {
+	public int perform(String operand) {
 		int result = 0;
-		for (Operator operator : operatorRegistry) {
-			if (operator.handlesOperand(operatorCharacter)) {
-				result = operator.doOperation(numbers);
-				break;
+
+		boolean foundOperator = false;
+
+		if (operand != null) {
+			for (Operator operator : operatorRegistry) {
+				if (operator.handlesOperand(operand)) {
+					result = operator.doOperation(numbers);
+					foundOperator = true;
+					break;
+				}
 			}
 		}
+
+		if (!foundOperator )
+			throw new IllegalArgumentException("Operand required");
 
 		return result;
 

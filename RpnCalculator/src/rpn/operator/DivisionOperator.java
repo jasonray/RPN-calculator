@@ -2,9 +2,11 @@ package rpn.operator;
 
 public class DivisionOperator extends BinaryOperator {
 
+	private static final String DIVIDE = "/";
+
 	@Override
 	public boolean handlesOperand(String operand) {
-		return operand.contentEquals("/");
+		return DIVIDE.contentEquals(operand);
 	}
 
 	@Override

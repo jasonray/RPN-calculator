@@ -2,6 +2,8 @@ package rpn.operator;
 
 public class MultiplyOperator extends BinaryOperator {
 
+	private static final String MULTIPLY = "*";
+
 	@Override
 	protected int doOperation(int lhs, int rhs) {
 		return lhs * rhs;
@@ -9,7 +11,7 @@ public class MultiplyOperator extends BinaryOperator {
 
 	@Override
 	public boolean handlesOperand(String operand) {
-		return operand.contentEquals("*");
+		return MULTIPLY.contentEquals(operand);
 	}
 
 }

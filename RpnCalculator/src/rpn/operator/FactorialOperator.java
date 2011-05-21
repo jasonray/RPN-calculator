@@ -4,6 +4,8 @@ import rpn.RpnStack;
 
 public class FactorialOperator implements Operator {
 
+	private static final String FACTORIAL = "!";
+
 	@Override
 	public int doOperation(RpnStack numbers) {
 		int total = 1;
@@ -18,7 +20,7 @@ public class FactorialOperator implements Operator {
 
 	@Override
 	public boolean handlesOperand(String operand) {
-		return operand.contentEquals("!");
+		return FACTORIAL.contentEquals(operand);
 	}
 
 }
