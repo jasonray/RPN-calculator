@@ -1,6 +1,5 @@
 package rpn.operator;
 
-
 public class SubtractionOperator extends BinaryOperation {
 
 	@Override

@@ -2,7 +2,6 @@ package rpn.operator;
 
 import rpn.RpnStack;
 
-
 public class FactorialOperator implements Operator {
 
 	@Override

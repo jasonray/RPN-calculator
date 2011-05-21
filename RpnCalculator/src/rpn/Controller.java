@@ -5,7 +5,6 @@ import rpn.operator.FactorialOperator;
 import rpn.operator.Operator;
 import rpn.operator.SubtractionOperator;
 
-
 public class Controller {
 	private RpnStack numbers = new RpnStack();
 
@@ -17,11 +16,11 @@ public class Controller {
 		int result = 0;
 		Operator operation = null;
 		if (string.contentEquals("+")) {
-			 operation = new AddOperator();
+			operation = new AddOperator();
 		} else if (string.contentEquals("-")) {
-			 operation = new SubtractionOperator();
+			operation = new SubtractionOperator();
 		} else if (string.contentEquals("!")) {
-			 operation = new FactorialOperator();
+			operation = new FactorialOperator();
 		}
 
 		result = operation.doOperation(numbers);
