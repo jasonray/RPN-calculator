@@ -11,13 +11,13 @@ public class StackTest {
 	public void pushPop() {
 		RpnStack s = new RpnStack();
 		s.push(1);
-		assertEquals(1, s.pop());
+		assertEquals((Integer) 1, s.pop());
 	}
 
 	@Test
 	public void popEmptyStack() {
 		RpnStack s = new RpnStack();
-		assertEquals(0, s.pop());
+		assertEquals((Integer) 0, s.pop());
 	}
 
 	@Test
@@ -25,6 +25,6 @@ public class StackTest {
 		RpnStack s = new RpnStack();
 		s.push(2);
 		s.push(1);
-		assertEquals(1, s.pop());
+		assertEquals((Integer) 1, s.pop());
 	}
 }

@@ -15,6 +15,7 @@ public class OperatorRegistry {
 		operatorRegistry.add(new MultiplyOperator());
 		operatorRegistry.add(new DivisionOperator());
 		operatorRegistry.add(new FactorialOperator());
+		operatorRegistry.add(new ReverseOperator());
 		return operatorRegistry;
 	}
 }

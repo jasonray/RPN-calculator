@@ -2,27 +2,27 @@ package rpn;
 
 import java.util.Stack;
 
-public class RpnStack {
-	private Stack<Integer> stack = new Stack<Integer>();
+public class RpnStack extends Stack<Integer> {
+	private static final long serialVersionUID = 1L;
 
-	public void push(int n) {
-		stack.push(n);
-	}
-
-	public int pop() {
+	@Override
+	public Integer pop() {
 		int n;
 		if (isEmpty())
 			n = 0;
 		else
-			n = stack.pop();
+			n = super.pop();
 		return n;
 	}
 
-	public int peek() {
-		return stack.peek();
+	@Override
+	public Integer peek() {
+		int n;
+		if (isEmpty())
+			n = 0;
+		else
+			n = super.peek();
+		return n;
 	}
 
-	public boolean isEmpty() {
-		return stack.empty();
-	}
 }

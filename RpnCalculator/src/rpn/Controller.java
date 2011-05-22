@@ -28,7 +28,7 @@ public class Controller {
 		}
 
 		if (!foundOperator )
-			throw new IllegalArgumentException("Operand required");
+			throw new IllegalArgumentException("Unknown Operand");
 
 		return result;
 
