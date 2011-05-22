@@ -18,7 +18,6 @@ public class AverageOperator implements Operator {
 		}
 		numbers.push(ave);
 		return ave;
-
 	}
 
 	@Override

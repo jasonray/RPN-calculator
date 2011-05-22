@@ -17,6 +17,7 @@ public class OperatorRegistry {
 		operatorRegistry.add(new FactorialOperator());
 		operatorRegistry.add(new ReverseOperator());
 		operatorRegistry.add(new AverageOperator());
+		operatorRegistry.add(new ClearOperator());
 		return operatorRegistry;
 	}
 }
