@@ -7,46 +7,46 @@ import org.junit.Test;
 public class SubtractTest {
 	@Test
 	public void subtractNoNumbers() {
-		Controller controller = new Controller();
-		int result = controller.perform("-");
+		RpnCalculator calc = new RpnCalculator();
+		int result = calc.perform("-");
 		assertEquals(0, result);
 	}
 
 	@Test
 	public void subtractOneNumbers() {
-		Controller controller = new Controller();
-		controller.enter(1);
-		int result = controller.perform("-");
+		RpnCalculator calc = new RpnCalculator();
+		calc.enter(1);
+		int result = calc.perform("-");
 		assertEquals(-1, result);
 	}
 
 	@Test
 	public void subtractOneNumberTwice() {
-		Controller controller = new Controller();
-		controller.enter(1);
-		int result = controller.perform("-");
-		result = controller.perform("-");
+		RpnCalculator calc = new RpnCalculator();
+		calc.enter(1);
+		int result = calc.perform("-");
+		result = calc.perform("-");
 		assertEquals(1, result);
 	}
 
 	@Test
 	public void subtractTwoNumbers() {
-		Controller controller = new Controller();
-		controller.enter(20);
-		controller.enter(10);
-		int result = controller.perform("-");
+		RpnCalculator calc = new RpnCalculator();
+		calc.enter(20);
+		calc.enter(10);
+		int result = calc.perform("-");
 		assertEquals(10, result);
 	}
 
 	@Test
 	public void subtractThreeNumbers() {
-		Controller controller = new Controller();
-		controller.enter(21);
-		controller.enter(13);
-		controller.perform("-");
-		controller.enter(5);
+		RpnCalculator calc = new RpnCalculator();
+		calc.enter(21);
+		calc.enter(13);
+		calc.perform("-");
+		calc.enter(5);
 
-		int result = controller.perform("-");
+		int result = calc.perform("-");
 		assertEquals(3, result);
 	}
 }

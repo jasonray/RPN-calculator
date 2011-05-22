@@ -8,66 +8,66 @@ public class ReverseStackTest {
 
 	@Test
 	public void reverseTwoNumbers() {
-		Controller controller = new Controller();
-		controller.enter(1);
-		controller.enter(2);
-		int result = controller.perform("REVERSE");
+		RpnCalculator calc = new RpnCalculator();
+		calc.enter(1);
+		calc.enter(2);
+		int result = calc.perform("REVERSE");
 		assertEquals(1, result);
 	}
 
 	@Test
 	public void reverseThreeNumbers() {
-		Controller controller = new Controller();
-		controller.enter(1);
-		controller.enter(2);
-		controller.enter(3);
-		int result = controller.perform("REVERSE");
+		RpnCalculator calc = new RpnCalculator();
+		calc.enter(1);
+		calc.enter(2);
+		calc.enter(3);
+		int result = calc.perform("REVERSE");
 		assertEquals(1, result);
 
-		assertEquals(1, controller.perform("-"));
-		assertEquals(2, controller.perform("-"));
+		assertEquals(1, calc.perform("-"));
+		assertEquals(2, calc.perform("-"));
 
 	}
 
 	@Test
 	public void reverseOneNumber() {
-		Controller controller = new Controller();
-		controller.enter(1);
-		int result = controller.perform("REVERSE");
+		RpnCalculator calc = new RpnCalculator();
+		calc.enter(1);
+		int result = calc.perform("REVERSE");
 		assertEquals(1, result);
 	}
 
 	@Test
 	public void reverseNumbers() {
-		Controller controller = new Controller();
-		int result = controller.perform("REVERSE");
+		RpnCalculator calc = new RpnCalculator();
+		int result = calc.perform("REVERSE");
 		assertEquals(0, result);
 	}
 
 	@Test
 	public void calledByLowerCase() {
-		Controller controller = new Controller();
-		controller.enter(1);
-		controller.enter(2);
-		int result = controller.perform("reverse");
+		RpnCalculator calc = new RpnCalculator();
+		calc.enter(1);
+		calc.enter(2);
+		int result = calc.perform("reverse");
 		assertEquals(1, result);
 	}
 
 	@Test
 	public void calledByRev() {
-		Controller controller = new Controller();
-		controller.enter(1);
-		controller.enter(2);
-		int result = controller.perform("REV");
+		RpnCalculator calc = new RpnCalculator();
+		calc.enter(1);
+		calc.enter(2);
+		int result = calc.perform("REV");
 		assertEquals(1, result);
 	}
 
 	@Test
 	public void calledByRevLowerCase() {
-		Controller controller = new Controller();
-		controller.enter(1);
-		controller.enter(2);
-		int result = controller.perform("rev");
+		RpnCalculator calc = new RpnCalculator();
+		calc.enter(1);
+		calc.enter(2);
+		int result = calc.perform("rev");
 		assertEquals(1, result);
 	}
 }

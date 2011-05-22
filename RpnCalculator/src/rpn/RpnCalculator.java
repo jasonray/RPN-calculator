@@ -4,7 +4,7 @@ import java.util.List;
 
 import rpn.operator.Operator;
 
-public class Controller {
+public class RpnCalculator {
 	private RpnStack numbers = new RpnStack();
 	private List<Operator> operatorRegistry = OperatorRegistry.getRegistry();
 

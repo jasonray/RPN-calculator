@@ -7,33 +7,33 @@ import org.junit.Test;
 public class ClearTest {
 	@Test
 	public void clearOnEmpty() {
-		Controller controller = new Controller();
-		controller.perform("C");
+		RpnCalculator calc = new RpnCalculator();
+		calc.perform("C");
 	}
 
 	@Test
 	public void clearOnSingle() {
-		Controller controller = new Controller();
-		controller.enter(1);
-		controller.perform("C");
-		int result = controller.perform("+");
+		RpnCalculator calc = new RpnCalculator();
+		calc.enter(1);
+		calc.perform("C");
+		int result = calc.perform("+");
 		assertEquals(0, result);
 	}
 
 	@Test
 	public void clearOnList() {
-		Controller controller = new Controller();
-		controller.enter(1);
-		controller.enter(1);
-		controller.enter(1);
-		controller.enter(1);
-		controller.enter(1);
-		controller.enter(1);
-		controller.enter(1);
-		controller.enter(1);
-		controller.enter(1);
-		controller.perform("C");
-		int result = controller.perform("+");
+		RpnCalculator calc = new RpnCalculator();
+		calc.enter(1);
+		calc.enter(1);
+		calc.enter(1);
+		calc.enter(1);
+		calc.enter(1);
+		calc.enter(1);
+		calc.enter(1);
+		calc.enter(1);
+		calc.enter(1);
+		calc.perform("C");
+		int result = calc.perform("+");
 		assertEquals(0, result);
 	}
 
