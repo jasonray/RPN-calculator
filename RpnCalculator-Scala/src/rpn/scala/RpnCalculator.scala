@@ -2,7 +2,7 @@ package rpn.scala
 
 class RpnCalculator {
   var x = 0;
-  val numbers = new scala.collection.mutable.Stack[Int]
+  val numbers = new RpnStack
 
   def enter(operand: Int): scala.Unit = {
     numbers.push(operand)
@@ -22,5 +22,5 @@ class RpnCalculator {
     return total
   }
 
-  private def getNextOperand() = if (numbers.isEmpty) 0 else numbers.pop()
+  private def getNextOperand() = numbers.pop
 }
