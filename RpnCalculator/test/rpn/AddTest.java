@@ -13,7 +13,7 @@ public class AddTest {
 		int result = controller.perform("+");
 		assertEquals(34, result);
 	}
-	
+
 	@Test
 	public void addNoNumbers() {
 		Controller controller = new Controller();
@@ -28,7 +28,7 @@ public class AddTest {
 		int result = controller.perform("+");
 		assertEquals(1, result);
 	}
-	
+
 	@Test
 	public void addThreeNumbersReturnsSum() {
 		Controller controller = new Controller();

@@ -2,6 +2,7 @@ package rpn;
 
 import rpn.operator.AddOperator;
 import rpn.operator.FactorialOperator;
+import rpn.operator.MultiplyOperator;
 import rpn.operator.Operator;
 import rpn.operator.SubtractionOperator;
 
@@ -22,6 +23,8 @@ public class Controller {
 			 operation = new SubtractionOperator();
 		} else if (string.contentEquals("!")) {
 			 operation = new FactorialOperator();
+		} else if (string.contentEquals("*")) {
+			operation = new MultiplyOperator();
 		}
 
 		result = operation.doOperation(numbers);
