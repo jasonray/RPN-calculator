@@ -1,18 +1,12 @@
 package rpn.operator;
 
-import rpn.RpnStack;
 
-public class SubtractionOperator implements Operator {
+public class SubtractionOperator extends BinaryOperator {
 
 	@Override
-	public int doOperation(RpnStack numbers) {
-		int result;
-		Integer rhs = numbers.pop();
-		Integer lhs = numbers.pop();
-
-		result = lhs - rhs;
-		numbers.push(result);
-		return result;
+	protected int doOperation(int lhs, int rhs) {
+		return lhs - rhs;
 	}
 
+	
 }

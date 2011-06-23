@@ -1,18 +1,10 @@
 package rpn.operator;
 
-import rpn.RpnStack;
-
-public class MultiplyOperator implements Operator {
+public class MultiplyOperator extends BinaryOperator {
 
 	@Override
-	public int doOperation(RpnStack numbers) {
-		int result;
-		Integer rhs = numbers.pop();
-		Integer lhs = numbers.pop();
-
-		result = lhs * rhs;
-		numbers.push(result);
-		return result;
+	protected int doOperation(int lhs, int rhs) {
+		return lhs * rhs;
 	}
 
 }
