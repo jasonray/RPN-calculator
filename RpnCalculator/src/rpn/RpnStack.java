@@ -9,7 +9,7 @@ public class RpnStack {
 		stack.push(n);
 	}
 
-	public int pop() {
+	public int getOperand() {
 		int n;
 		if (isEmpty())
 			n = 0;
@@ -22,7 +22,7 @@ public class RpnStack {
 		return stack.peek();
 	}
 
-	public boolean isEmpty() {
+	private boolean isEmpty() {
 		return stack.empty();
 	}
 }

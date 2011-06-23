@@ -8,7 +8,7 @@ public class FactorialOperator implements Operator {
 	@Override
 	public int doOperation(RpnStack numbers) {
 		int total = 1;
-		Integer operand = numbers.pop();
+		Integer operand = numbers.getOperand();
 		while (operand > 0) {
 			total = total * operand;
 			operand--;

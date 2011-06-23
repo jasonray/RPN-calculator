@@ -6,8 +6,8 @@ public abstract class BinaryOperator implements Operator {
 	@Override
 	public int doOperation(RpnStack numbers) {
 		int result;
-		Integer rhs = numbers.pop();
-		Integer lhs = numbers.pop();
+		Integer rhs = numbers.getOperand();
+		Integer lhs = numbers.getOperand();
 
 		result = doOperation(lhs, rhs);
 		numbers.push(result);
