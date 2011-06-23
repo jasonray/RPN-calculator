@@ -19,7 +19,13 @@ public class RpnStack {
 	}
 
 	public int peek() {
-		return stack.peek();
+		int n;
+		if (isEmpty()) {
+			n = 0;
+		} else {
+			n = stack.peek();
+		}
+		return n;
 	}
 
 	private boolean isEmpty() {

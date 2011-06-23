@@ -1,6 +1,6 @@
 package rpn;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
@@ -66,7 +66,7 @@ public class RpnStackTest {
 		assertEquals(0, result);
 
 	}
-	
+
 	@Test
 	public void pushPop() {
 		RpnStack s = new RpnStack();
@@ -86,5 +86,11 @@ public class RpnStackTest {
 		s.push(2);
 		s.push(1);
 		assertEquals(1, s.getOperand());
+	}
+
+	@Test
+	public void peekFromEmptyStack() {
+		RpnStack s = new RpnStack();
+		assertEquals(0, s.peek());
 	}
 }
