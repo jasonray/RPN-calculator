@@ -3,6 +3,7 @@ package rpn;
 import java.util.ArrayList;
 import java.util.List;
 
+import rpn.operator.AbsoluteOperator;
 import rpn.operator.AdditionOperator;
 import rpn.operator.AverageOperator;
 import rpn.operator.ClearOperator;
@@ -30,6 +31,7 @@ public class OperatorRegistry {
 		operatorRegistry.add(new AverageOperator());
 		operatorRegistry.add(new ClearOperator());
 		operatorRegistry.add(new ExponentiationOperator());
+		operatorRegistry.add(new AbsoluteOperator());
 		return operatorRegistry;
 	}
 
