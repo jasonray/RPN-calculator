@@ -1,10 +1,10 @@
 package rpn.operator;
 
-public class AddOperator extends BinaryOperator {
+public class DivisionOperator extends BinaryOperator {
 
 	@Override
 	protected int doOperation(int lhs, int rhs) {
-		return lhs + rhs;
+		return lhs / rhs;
 	}
 
 }

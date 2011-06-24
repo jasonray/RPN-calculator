@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-public class AddTest {
+public class AdditionTest {
 	@Test
 	public void addTwoNumbersReturnsSum() {
 		Controller controller = new Controller();

@@ -22,6 +22,7 @@ public class MultiplicationTest {
 		int result = controller.perform("*");
 		assertEquals(-8, result);
 	}
+
 	@Test
 	public void multiplyNoNumbers() {
 		Controller controller = new Controller();
