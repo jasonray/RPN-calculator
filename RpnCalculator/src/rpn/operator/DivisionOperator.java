@@ -5,7 +5,7 @@ public class DivisionOperator extends BinaryOperator {
 	private static final String DIVIDE = "/";
 
 	@Override
-	public boolean handlesOperand(String operand) {
+	public boolean handlesOperatorCharacter(String operand) {
 		return DIVIDE.contentEquals(operand);
 	}
 

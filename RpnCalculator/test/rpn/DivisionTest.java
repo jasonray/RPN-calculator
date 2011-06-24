@@ -1,40 +1,40 @@
 package rpn;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
 public class DivisionTest {
 	@Test
 	public void divideTwoNumbers() {
-		Controller controller = new Controller();
-		controller.enter(8);
-		controller.enter(2);
-		int result = controller.perform("/");
+		RpnCalculator calc = new RpnCalculator();
+		calc.enter(8);
+		calc.enter(2);
+		int result = calc.perform("/");
 		assertEquals(4, result);
 	}
 
 	@Test
 	public void divideOneNumber() {
-		Controller controller = new Controller();
-		controller.enter(2);
-		int result = controller.perform("/");
+		RpnCalculator calc = new RpnCalculator();
+		calc.enter(2);
+		int result = calc.perform("/");
 		assertEquals(0, result);
 	}
 
 	@Test(expected = ArithmeticException.class)
 	public void divideNoNumber() {
-		Controller controller = new Controller();
-		controller.perform("/");
+		RpnCalculator calc = new RpnCalculator();
+		calc.perform("/");
 	}
 
 	@Test
 	public void divideThreeNumber() {
-		Controller controller = new Controller();
-		controller.enter(16);
-		controller.enter(8);
-		controller.enter(2);
-		int result = controller.perform("/");
+		RpnCalculator calc = new RpnCalculator();
+		calc.enter(16);
+		calc.enter(8);
+		calc.enter(2);
+		int result = calc.perform("/");
 		assertEquals(4, result);
 	}
 

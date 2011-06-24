@@ -15,7 +15,7 @@ public class ClearOperator implements Operator {
 	}
 
 	@Override
-	public boolean handlesOperand(String operand) {
+	public boolean handlesOperatorCharacter(String operand) {
 		return C.contentEquals(operand.toUpperCase()) || CLEAR.contentEquals(operand.toUpperCase());
 
 	}

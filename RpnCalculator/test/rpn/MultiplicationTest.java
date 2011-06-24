@@ -7,45 +7,45 @@ import org.junit.Test;
 public class MultiplicationTest {
 	@Test
 	public void multipleTwoNumbers() {
-		Controller controller = new Controller();
-		controller.enter(2);
-		controller.enter(4);
-		int result = controller.perform("*");
+		RpnCalculator calc = new RpnCalculator();
+		calc.enter(2);
+		calc.enter(4);
+		int result = calc.perform("*");
 		assertEquals(8, result);
 	}
 
 	@Test
 	public void multipleNegNumbers() {
-		Controller controller = new Controller();
-		controller.enter(-2);
-		controller.enter(4);
-		int result = controller.perform("*");
+		RpnCalculator calc = new RpnCalculator();
+		calc.enter(-2);
+		calc.enter(4);
+		int result = calc.perform("*");
 		assertEquals(-8, result);
 	}
 
 	@Test
 	public void multiplyNoNumbers() {
-		Controller controller = new Controller();
-		int result = controller.perform("*");
+		RpnCalculator calc = new RpnCalculator();
+		int result = calc.perform("*");
 		assertEquals(0, result);
 	}
 
 	@Test
 	public void multiplyOneNumber() {
-		Controller controller = new Controller();
-		controller.enter(1);
-		int result = controller.perform("*");
+		RpnCalculator calc = new RpnCalculator();
+		calc.enter(1);
+		int result = calc.perform("*");
 		assertEquals(0, result);
 	}
 
 	@Test
 	public void multipleThreeNumbers() {
-		Controller controller = new Controller();
-		controller.enter(2);
-		controller.enter(3);
-		controller.perform("*");
-		controller.enter(3);
-		int result = controller.perform("*");
+		RpnCalculator calc = new RpnCalculator();
+		calc.enter(2);
+		calc.enter(3);
+		calc.perform("*");
+		calc.enter(3);
+		int result = calc.perform("*");
 		assertEquals(18, result);
 	}
 }

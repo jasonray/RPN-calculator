@@ -10,7 +10,7 @@ public class MultiplicationOperator extends BinaryOperator {
 	}
 
 	@Override
-	public boolean handlesOperand(String operand) {
+	public boolean handlesOperatorCharacter(String operand) {
 		return MULTIPLY.contentEquals(operand);
 	}
 

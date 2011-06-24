@@ -21,7 +21,7 @@ public class AverageOperator implements Operator {
 	}
 
 	@Override
-	public boolean handlesOperand(String operand) {
+	public boolean handlesOperatorCharacter(String operand) {
 		return "AVERAGE".contentEquals(operand.toUpperCase()) || "AVE".contentEquals(operand.toUpperCase());
 
 	}

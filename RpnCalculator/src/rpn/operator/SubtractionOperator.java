@@ -10,7 +10,7 @@ public class SubtractionOperator extends BinaryOperator {
 	}
 
 	@Override
-	public boolean handlesOperand(String operand) {
+	public boolean handlesOperatorCharacter(String operand) {
 		return MINUS.contentEquals(operand);
 	}
 

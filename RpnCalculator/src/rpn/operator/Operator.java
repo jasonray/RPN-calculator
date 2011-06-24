@@ -5,5 +5,5 @@ import rpn.RpnStack;
 public interface Operator {
 	public int doOperation(RpnStack numbers);
 
-	public boolean handlesOperand(String operand);
+	public boolean handlesOperatorCharacter(String operand);
 }

@@ -3,11 +3,22 @@ package rpn;
 import java.util.ArrayList;
 import java.util.List;
 
-import rpn.operator.*;
+import rpn.operator.AdditionOperator;
+import rpn.operator.AverageOperator;
+import rpn.operator.ClearOperator;
+import rpn.operator.DivisionOperator;
+import rpn.operator.ExponentiationOperator;
+import rpn.operator.FactorialOperator;
+import rpn.operator.MultiplicationOperator;
+import rpn.operator.Operator;
+import rpn.operator.ReverseOperator;
+import rpn.operator.SubtractionOperator;
 
 public class OperatorRegistry {
 
-	public static List<Operator> getRegistry() {
+	private List<Operator> registry = getRegistry();
+
+	private List<Operator> getRegistry() {
 		List<Operator> operatorRegistry;
 		operatorRegistry = new ArrayList<Operator>();
 		operatorRegistry.add(new AdditionOperator());
@@ -18,15 +29,18 @@ public class OperatorRegistry {
 		operatorRegistry.add(new ReverseOperator());
 		operatorRegistry.add(new AverageOperator());
 		operatorRegistry.add(new ClearOperator());
+		operatorRegistry.add(new ExponentiationOperator());
 		return operatorRegistry;
 	}
 
-	public static Operator getOperator(String operatorCharacter) {
+	public Operator getOperator(String operatorCharacter) {
 		Operator relevantOperator = null;
-		for (Operator operator : getRegistry()) {
-			if (operator.handlesOperand(operatorCharacter)) {
-				relevantOperator = operator;
-				break;
+		if (operatorCharacter != null && !operatorCharacter.contentEquals("")) {
+			for (Operator operator : registry) {
+				if (operator.handlesOperatorCharacter(operatorCharacter)) {
+					relevantOperator = operator;
+					break;
+				}
 			}
 		}
 		return relevantOperator;

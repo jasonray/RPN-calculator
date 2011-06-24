@@ -20,7 +20,7 @@ public class ReverseOperator implements Operator {
 	}
 
 	@Override
-	public boolean handlesOperand(String operand) {
+	public boolean handlesOperatorCharacter(String operand) {
 		return "REVERSE".contentEquals(operand.toUpperCase()) || "REV".contentEquals(operand.toUpperCase());
 	}
 
