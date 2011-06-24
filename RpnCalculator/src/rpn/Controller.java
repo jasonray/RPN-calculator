@@ -14,7 +14,7 @@ public class Controller {
 
 	public int perform(String operatorCharacter) {
 		int result = 0;
-		Operator operatorImplementation = OperatorFactory.getOperator(operatorCharacter);
+		Operator operatorImplementation = OperatorRegistry.getOperator(operatorCharacter);
 		result = operatorImplementation.doOperation(numbers);
 		return result;
 

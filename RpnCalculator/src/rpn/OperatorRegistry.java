@@ -20,4 +20,15 @@ public class OperatorRegistry {
 		operatorRegistry.add(new ClearOperator());
 		return operatorRegistry;
 	}
+
+	public static Operator getOperator(String operatorCharacter) {
+		Operator relevantOperator = null;
+		for (Operator operator : getRegistry()) {
+			if (operator.handlesOperand(operatorCharacter)) {
+				relevantOperator = operator;
+				break;
+			}
+		}
+		return relevantOperator;
+	}
 }
