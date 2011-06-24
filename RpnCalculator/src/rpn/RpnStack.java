@@ -9,7 +9,7 @@ public class RpnStack {
 		stack.push(n);
 	}
 
-	public int getOperand() {
+	public int pop() {
 		int n;
 		if (isEmpty())
 			n = 0;
@@ -28,7 +28,8 @@ public class RpnStack {
 		return n;
 	}
 
-	private boolean isEmpty() {
+	public boolean isEmpty() {
 		return stack.empty();
 	}
+
 }

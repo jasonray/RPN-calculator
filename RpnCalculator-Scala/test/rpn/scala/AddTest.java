@@ -1,24 +1,17 @@
-package rpn;
+package rpn.scala;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-public class AdditionTest {
+public class AddTest {
 	@Test
-	public void addTwoNumbersReturnsSum() {
+	public void addTwoNumbers() {
 		RpnCalculator calc = new RpnCalculator();
-		calc.enter(30);
-		calc.enter(4);
+		calc.enter(1);
+		calc.enter(2);
 		int result = calc.perform("+");
-		assertEquals(34, result);
-	}
-
-	@Test
-	public void addNoNumbers() {
-		RpnCalculator calc = new RpnCalculator();
-		int result = calc.perform("+");
-		assertEquals(0, result);
+		assertEquals(3, result);
 	}
 
 	@Test
@@ -30,13 +23,30 @@ public class AdditionTest {
 	}
 
 	@Test
-	public void addThreeNumbersReturnsSum() {
+	public void addNoNumbers() {
+		RpnCalculator calc = new RpnCalculator();
+		int result = calc.perform("+");
+		assertEquals(0, result);
+	}
+
+	@Test
+	public void addTwoNumbersThenAnother() {
 		RpnCalculator calc = new RpnCalculator();
 		calc.enter(1);
 		calc.enter(2);
 		calc.perform("+");
+		calc.enter(4);
+		int result = calc.perform("+");
+		assertEquals(7, result);
+	}
+	
+	@Test
+	public void threeNumbersOnQueueThenAdd() {
+		RpnCalculator calc = new RpnCalculator();
+		calc.enter(1);
+		calc.enter(2);
 		calc.enter(3);
 		int result = calc.perform("+");
-		assertEquals(6, result);
+		assertEquals(5, result);
 	}
 }

@@ -3,11 +3,12 @@ package rpn.operator;
 import rpn.RpnStack;
 
 public abstract class BinaryOperator implements Operator {
+
 	@Override
 	public int doOperation(RpnStack numbers) {
 		int result;
-		Integer rhs = numbers.getOperand();
-		Integer lhs = numbers.getOperand();
+		Integer rhs = numbers.pop();
+		Integer lhs = numbers.pop();
 
 		result = doOperation(lhs, rhs);
 		numbers.push(result);

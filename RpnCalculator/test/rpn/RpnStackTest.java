@@ -8,7 +8,7 @@ public class RpnStackTest {
 	@Test
 	public void getOperandFromEmptyStack() {
 		RpnStack stack = new RpnStack();
-		int result = stack.getOperand();
+		int result = stack.pop();
 		assertEquals(0, result);
 	}
 
@@ -26,7 +26,7 @@ public class RpnStackTest {
 		stack.push(2);
 		stack.push(5);
 
-		int result = stack.getOperand();
+		int result = stack.pop();
 		assertEquals(5, result);
 	}
 
@@ -36,10 +36,10 @@ public class RpnStackTest {
 		stack.push(2);
 		stack.push(5);
 
-		int result = stack.getOperand();
+		int result = stack.pop();
 		assertEquals(5, result);
 
-		result = stack.getOperand();
+		result = stack.pop();
 		assertEquals(2, result);
 	}
 
@@ -61,8 +61,8 @@ public class RpnStackTest {
 		RpnStack stack = new RpnStack();
 		stack.push(2);
 
-		int result = stack.getOperand();
-		result = stack.getOperand();
+		int result = stack.pop();
+		result = stack.pop();
 		assertEquals(0, result);
 
 	}
@@ -71,13 +71,13 @@ public class RpnStackTest {
 	public void pushPop() {
 		RpnStack s = new RpnStack();
 		s.push(1);
-		assertEquals(1, s.getOperand());
+		assertEquals(1, s.pop());
 	}
 
 	@Test
 	public void popEmptyStack() {
 		RpnStack s = new RpnStack();
-		assertEquals(0, s.getOperand());
+		assertEquals(0, s.pop());
 	}
 
 	@Test
@@ -85,7 +85,7 @@ public class RpnStackTest {
 		RpnStack s = new RpnStack();
 		s.push(2);
 		s.push(1);
-		assertEquals(1, s.getOperand());
+		assertEquals(1, s.pop());
 	}
 
 	@Test
