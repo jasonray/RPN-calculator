@@ -11,6 +11,12 @@ public class ControllerTest {
 		calc.enter(1);
 	}
 
+	@Test(expected = IllegalArgumentException.class)
+	public void invalidOperation() {
+		RpnCalculator calc = new RpnCalculator();
+		calc.perform("????");
+	}
+
 	@Test
 	public void performTest() {
 		RpnCalculator calc = new RpnCalculator();
