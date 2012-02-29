@@ -2,15 +2,11 @@ package rpn.scala.operators
 
 import rpn.scala.RpnStack
 
-class SubtractionOperator extends Operator {
+class SubtractionOperator extends BinaryOperator {
   val MINUS = "-"
-    
-  def performOperation(numbers: RpnStack): Int = {
-    val rhs = numbers.pop
-    val lhs = numbers.pop
-    val result = lhs - rhs
-    numbers.push(result)
-    return result
+
+  def doOperator(lhs: Int, rhs: Int): Int = {
+    lhs - rhs
   }
 
   def handlesOperatorCharacter(operand: String): Boolean = {
