@@ -1,4 +1,6 @@
-package rpn.scala
+package rpn.scala.operators
+
+import rpn.scala.RpnStack
 
 class SubtractOperator extends Operator {
   def performOperation(numbers: RpnStack): Int = {

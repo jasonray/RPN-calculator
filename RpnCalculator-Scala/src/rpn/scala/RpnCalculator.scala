@@ -1,5 +1,9 @@
 package rpn.scala
 
+import operators.AddOperator
+import operators.Operator
+import operators.SubtractOperator
+
 class RpnCalculator {
   private val numbers = new RpnStack
 
@@ -7,13 +11,9 @@ class RpnCalculator {
     numbers.push(operand)
   }
 
-  def perform(operator: String): Int = {
-    var operatorHandler: Operator = null
-    if (operator == "+") {
-      operatorHandler = new AddOperator
-    } else if (operator == "-") {
-      operatorHandler = new SubtractOperator
-    }
-    operatorHandler.performOperation(numbers);
+  def perform(operatorCharacter: String): Int = {
+    val registry = new OperatorRegistry()
+    val operator = registry.getOperator(operatorCharacter)
+    return operator.performOperation(numbers);
   }
 }

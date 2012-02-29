@@ -5,6 +5,7 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
 public class SubtractTest {
+
 	@Test
 	public void subtractNoNumbers() {
 		RpnCalculator calc = new RpnCalculator();

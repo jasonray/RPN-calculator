@@ -1,4 +1,5 @@
-package rpn.scala
+package rpn.scala.operators
+import rpn.scala.RpnStack
 
 class AddOperator extends Operator {
   def performOperation(numbers: RpnStack): Int = {
@@ -8,4 +9,5 @@ class AddOperator extends Operator {
     numbers.push(result)
     return result
   }
+  
 }
