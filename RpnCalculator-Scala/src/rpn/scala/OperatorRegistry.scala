@@ -9,14 +9,12 @@ class OperatorRegistry {
     new SumOperator,
     new ClearOperator,
     new FactorialOperator,
-    new FibonacciOperator
-  )
+    new FibonacciOperator)
 
   def getOperator(operatorCharacter: String): Operator = {
     var operatorToUse: Operator = null
-    for (operator <- registry) {
-      if (operator.handlesOperatorCharacter(operatorCharacter))
-        operatorToUse = operator;
+    for (operator <- registry if operator.handlesOperatorCharacter(operatorCharacter)) {
+      operatorToUse = operator;
     }
     return operatorToUse;
   }
