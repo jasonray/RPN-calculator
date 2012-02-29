@@ -4,7 +4,8 @@ import rpn.scala.operators._
 class OperatorRegistry {
   val registry = List[Operator](
     new AdditionOperator,
-    new SubtractionOperator)
+    new SubtractionOperator,
+    new AbsoluteOperator)
 
   def getOperator(operatorCharacter: String): Operator = {
     var operatorToUse: Operator = null
