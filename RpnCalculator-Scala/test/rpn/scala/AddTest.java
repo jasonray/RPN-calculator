@@ -39,7 +39,7 @@ public class AddTest {
 		int result = calc.perform("+");
 		assertEquals(7, result);
 	}
-	
+
 	@Test
 	public void threeNumbersOnQueueThenAdd() {
 		RpnCalculator calc = new RpnCalculator();

@@ -1,7 +1,6 @@
 package rpn.scala
-import operators.AddOperator
-import operators.Operator
-import operators.SubtractOperator
+import rpn.scala.operators._
+
 
 class OperatorRegistry {
   def getOperator(operatorCharacter: String): Operator = {
@@ -10,6 +9,6 @@ class OperatorRegistry {
     else if (operatorCharacter == "-")
       new SubtractOperator
     else
-      null;
+      null; 
   }
 }

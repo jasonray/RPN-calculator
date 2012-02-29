@@ -6,14 +6,17 @@ import operators.SubtractOperator
 
 class RpnCalculator {
   private val numbers = new RpnStack
+  private val registry = new OperatorRegistry()
 
   def enter(operand: Int): scala.Unit = {
-    numbers.push(operand)
+    numbers.push(operand) 
   }
 
   def perform(operatorCharacter: String): Int = {
-    val registry = new OperatorRegistry()
-    val operator = registry.getOperator(operatorCharacter)
-    return operator.performOperation(numbers);
+    val operatorImplementation = registry.getOperator(operatorCharacter)
+
+    if (operatorImplementation == null) throw new IllegalArgumentException("Unknown operator " + operatorCharacter);
+
+    return operatorImplementation.performOperation(numbers);
   }
 }
