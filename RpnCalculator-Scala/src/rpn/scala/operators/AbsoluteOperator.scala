@@ -2,19 +2,16 @@ package rpn.scala.operators
 
 import rpn.scala.RpnStack
 
-class AbsoluteOperator extends Operator {
+class AbsoluteOperator extends UnaryOperator {
   val ABSOLUTE = "||"
 
-  def performOperation(numbers: RpnStack): Int = {
-    val n = numbers.pop();
-    val result = {
+  def doOperation(n: Int): Int = {
+
       if (isPositive(n))
         n
       else
         changeSign(n)
-    }
-    numbers.push(result);
-    return result
+   
   }
 
   def handlesOperatorCharacter(operand: String): Boolean = {
