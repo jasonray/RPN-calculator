@@ -5,7 +5,8 @@ class OperatorRegistry {
   val registry = List[Operator](
     new AdditionOperator,
     new SubtractionOperator,
-    new AbsoluteOperator)
+    new AbsoluteOperator,
+    new SumOperator)
 
   def getOperator(operatorCharacter: String): Operator = {
     var operatorToUse: Operator = null
