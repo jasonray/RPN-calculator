@@ -1,8 +1,8 @@
 package rpn.scala
 
-import operators.AddOperator
+import operators.AdditionOperator
 import operators.Operator
-import operators.SubtractOperator
+import operators.SubtractionOperator
 
 class RpnCalculator {
   private val numbers = new RpnStack
