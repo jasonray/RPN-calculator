@@ -1,4 +1,5 @@
 package rpn.scala.operators
+
 import rpn.scala.RpnStack
 
 class AdditionOperator extends Operator {
