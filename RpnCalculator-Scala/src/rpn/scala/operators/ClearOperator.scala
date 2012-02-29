@@ -7,7 +7,9 @@ class ClearOperator extends FullStackOperator {
   def continueOperator(value: Int): Int = { 0; }
 
   def handlesOperatorCharacter(operand: String): Boolean = {
-    operand.toUpperCase() == C || operand.toUpperCase() == CLEAR
+    OperandComparer.areEqual(operand, C) ||
+        OperandComparer.areEqual(operand, CLEAR)
+
   }
 
 }

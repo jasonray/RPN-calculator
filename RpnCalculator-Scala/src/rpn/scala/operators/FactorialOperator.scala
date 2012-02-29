@@ -12,6 +12,8 @@ class FactorialOperator extends UnaryOperator {
     else value * doOperation(value - 1)
   }
 
-  def handlesOperatorCharacter(operand: String): Boolean = { operand == FACTORIAL }
+  def handlesOperatorCharacter(operand: String): Boolean = {
+    OperandComparer.areEqual(operand, FACTORIAL)
+  }
 
 }

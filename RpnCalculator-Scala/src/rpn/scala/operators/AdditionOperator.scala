@@ -10,7 +10,7 @@ class AdditionOperator extends BinaryOperator {
   }
 
   def handlesOperatorCharacter(operand: String): Boolean = {
-    operand == PLUS;
+    OperandComparer.areEqual(operand, PLUS)
   }
 
 }

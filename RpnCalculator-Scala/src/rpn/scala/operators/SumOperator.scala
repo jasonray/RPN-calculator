@@ -11,7 +11,7 @@ class SumOperator extends FullStackOperator {
   }
 
   def handlesOperatorCharacter(operand: String): Boolean = {
-    operand.toLowerCase() == SUM.toLowerCase();
+    OperandComparer.areEqual(operand, SUM)
   }
 
 }

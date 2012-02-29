@@ -1,7 +1,8 @@
 package rpn.scala.operators
 
 class FibonacciOperator extends UnaryOperator {
-  val FIBONACI_OPERATOR = "fib"
+  val FIB_OPERATOR = "fib"
+  val FIBONACI_OPERATOR = "fibonaci"
 
   def doOperation(value: Int): Int = {
     fibonacci(value)
@@ -15,7 +16,8 @@ class FibonacciOperator extends UnaryOperator {
   }
 
   def handlesOperatorCharacter(operand: String): Boolean = {
-    operand.toLowerCase() == FIBONACI_OPERATOR
+    OperandComparer.areEqual(operand, FIBONACI_OPERATOR) ||
+      OperandComparer.areEqual(operand, FIB_OPERATOR)
   }
 
 }

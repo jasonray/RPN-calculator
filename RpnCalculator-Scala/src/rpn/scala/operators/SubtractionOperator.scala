@@ -10,7 +10,8 @@ class SubtractionOperator extends BinaryOperator {
   }
 
   def handlesOperatorCharacter(operand: String): Boolean = {
-    operand == MINUS;
+    OperandComparer.areEqual(operand, MINUS)
+
   }
 
 }

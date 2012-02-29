@@ -7,15 +7,15 @@ class AbsoluteOperator extends UnaryOperator {
 
   def doOperation(n: Int): Int = {
 
-      if (isPositive(n))
-        n
-      else
-        changeSign(n)
-   
+    if (isPositive(n))
+      n
+    else
+      changeSign(n)
+
   }
 
   def handlesOperatorCharacter(operand: String): Boolean = {
-    operand == ABSOLUTE;
+    OperandComparer.areEqual(operand, ABSOLUTE)
   }
 
   def changeSign(n: Int) = { -1 * n }
