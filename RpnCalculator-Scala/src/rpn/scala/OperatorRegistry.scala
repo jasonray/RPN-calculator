@@ -7,7 +7,8 @@ class OperatorRegistry {
     new SubtractionOperator,
     new AbsoluteOperator,
     new SumOperator,
-    new ClearOperator
+    new ClearOperator,
+    new FactorialOperator
     )
 
   def getOperator(operatorCharacter: String): Operator = {
