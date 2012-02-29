@@ -17,4 +17,8 @@ class RpnCalculator {
     if (operatorImplementation == null) throw new IllegalArgumentException("Unknown operator " + operatorCharacter);
     return operatorImplementation.performOperation(numbers);
   }
+  
+  def getValue(): Int = {
+    numbers.peek()
+  }
 }

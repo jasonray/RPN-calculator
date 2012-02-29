@@ -8,8 +8,9 @@ class OperatorRegistry {
     new AbsoluteOperator,
     new SumOperator,
     new ClearOperator,
-    new FactorialOperator
-    )
+    new FactorialOperator,
+    new FibonacciOperator
+  )
 
   def getOperator(operatorCharacter: String): Operator = {
     var operatorToUse: Operator = null
