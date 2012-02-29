@@ -1,14 +1,13 @@
 package rpn.scala.operators
 import rpn.scala.RpnStack
 
-class SumOperator extends Operator {
+class SumOperator extends FullStackOperator {
   val SUM = "SUM"
+  var cumlativeSum = 0;
 
-  def performOperation(numbers: RpnStack): Int = {
-    var sum = 0;
-    while (!numbers.isEmpty()) 
-      sum += numbers.pop();
-    return sum;
+  def continueOperator(value: Int): Int = {
+    cumlativeSum += value;
+    return cumlativeSum
   }
 
   def handlesOperatorCharacter(operand: String): Boolean = {
