@@ -12,10 +12,11 @@ class OperatorRegistry {
     new FibonacciOperator)
 
   def getOperator(operatorCharacter: String): Operator = {
-    var operatorToUse: Operator = null
-    for (operator <- registry if operator.handlesOperatorCharacter(operatorCharacter)) {
-      operatorToUse = operator;
-    }
-    return operatorToUse;
+    val supportedOperators = registry.filter(operator => operator.handlesOperatorCharacter(operatorCharacter))
+
+    if (supportedOperators.size == 0)
+      return null
+    else
+      return supportedOperators(0)
   }
 }
