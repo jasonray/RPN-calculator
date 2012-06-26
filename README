@@ -1,4 +1,5 @@
-rpn calculator for coding kata
-comment post class #2
-adding a sample note in the readme
-new note
+RPN calculator
+
+This exercise was used during a coding kata.
+
+This RPN [http://en.wikipedia.org/wiki/Reverse_Polish_notation] calculator implementation allows for creation of strategies for various operations.
