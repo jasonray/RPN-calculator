@@ -1,0 +1,16 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<testsuite name="rpn.RpnStackTest" tests="10" failures="0" errors="0" timestamp="2014-03-08T21:43:45" hostname="rayj-macbookpro.jayraynet" time="0.003">
+  <properties/>
+  <testcase name="peekFromPush" classname="rpn.RpnStackTest" time="0.0"/>
+  <testcase name="getOperandFromEmptyStack" classname="rpn.RpnStackTest" time="0.0"/>
+  <testcase name="popFromPush" classname="rpn.RpnStackTest" time="0.0"/>
+  <testcase name="multiplePops" classname="rpn.RpnStackTest" time="0.0"/>
+  <testcase name="multiplePeeks" classname="rpn.RpnStackTest" time="0.0"/>
+  <testcase name="emptyStackWithPopsNextReturns0" classname="rpn.RpnStackTest" time="0.0"/>
+  <testcase name="pushPop" classname="rpn.RpnStackTest" time="0.0"/>
+  <testcase name="popEmptyStack" classname="rpn.RpnStackTest" time="0.0"/>
+  <testcase name="pushpushpop" classname="rpn.RpnStackTest" time="0.0"/>
+  <testcase name="peekFromEmptyStack" classname="rpn.RpnStackTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

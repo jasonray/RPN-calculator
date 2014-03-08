@@ -1,0 +1,14 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<testsuite name="rpn.ExponentiationOperatorTest" tests="8" failures="0" errors="0" timestamp="2014-03-08T21:43:45" hostname="rayj-macbookpro.jayraynet" time="0.003">
+  <properties/>
+  <testcase name="raiseToPower" classname="rpn.ExponentiationOperatorTest" time="0.0"/>
+  <testcase name="raiseToZero" classname="rpn.ExponentiationOperatorTest" time="0.0"/>
+  <testcase name="oneRaised" classname="rpn.ExponentiationOperatorTest" time="0.0"/>
+  <testcase name="zeroRaisedToPositive" classname="rpn.ExponentiationOperatorTest" time="0.001"/>
+  <testcase name="zeroRaisedToNegative" classname="rpn.ExponentiationOperatorTest" time="0.0"/>
+  <testcase name="neg1ToOdd" classname="rpn.ExponentiationOperatorTest" time="0.0"/>
+  <testcase name="neg1ToEven" classname="rpn.ExponentiationOperatorTest" time="0.0"/>
+  <testcase name="raiseToNegPower" classname="rpn.ExponentiationOperatorTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

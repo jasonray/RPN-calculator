@@ -1,0 +1,10 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<testsuite name="rpn.AdditionTest" tests="4" failures="0" errors="0" timestamp="2014-03-08T21:43:45" hostname="rayj-macbookpro.jayraynet" time="0.001">
+  <properties/>
+  <testcase name="addTwoNumbersReturnsSum" classname="rpn.AdditionTest" time="0.0"/>
+  <testcase name="addNoNumbers" classname="rpn.AdditionTest" time="0.0"/>
+  <testcase name="addOneNumber" classname="rpn.AdditionTest" time="0.0"/>
+  <testcase name="addThreeNumbersReturnsSum" classname="rpn.AdditionTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
