@@ -39,4 +39,13 @@ public class AdditionTest {
         int result = calc.perform("+");
         assertEquals(6, result);
     }
+
+    @Test
+    public void addNegNumbers() {
+        RpnCalculator calc = new RpnCalculator();
+        calc.enter(1);
+        calc.enter(-2);
+        int result = calc.perform("+");
+        assertEquals(-1, result);
+    }
 }
