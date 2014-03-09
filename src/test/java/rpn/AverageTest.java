@@ -49,4 +49,13 @@ public class AverageTest {
         int result = calc.perform("AVE");
         assertEquals(2, result);
     }
+
+    @Test
+    public void averageWithNegativeNumber() {
+        RpnCalculator calc = new RpnCalculator();
+        calc.enter(2);
+        calc.enter(-4);
+        int result = calc.perform("AVERAGE");
+        assertEquals(-1, result);
+    }
 }
