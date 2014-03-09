@@ -4,7 +4,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-public class ExponentiationOperatorTest {
+public class ExponentiationTest {
     @Test
     public void raiseToPower() {
         runTest(2, 3, 8);
