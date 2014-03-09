@@ -5,6 +5,12 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
 public class AbsoluteTest {
+
+    @Test
+    public void zero() {
+        runTest(0, 0);
+    }
+
     @Test
     public void one() {
         runTest(1, 1);
