@@ -4,7 +4,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-public class AbsoluteOperatorTest {
+public class AbsoluteTest {
     @Test
     public void one() {
         runTest(1, 1);
