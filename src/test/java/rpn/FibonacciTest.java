@@ -4,7 +4,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-public class FibonacciOperatorTest {
+public class FibonacciTest {
     @Test
     public void fibEmpty() {
         RpnCalculator calc = new RpnCalculator();
