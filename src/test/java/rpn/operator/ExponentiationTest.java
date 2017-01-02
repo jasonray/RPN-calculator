@@ -1,9 +1,9 @@
 package rpn.operator;
 
-import static org.junit.Assert.assertEquals;
-
 import org.junit.Test;
 import rpn.RpnCalculator;
+
+import static org.junit.Assert.assertEquals;
 
 public class ExponentiationTest {
     @Test
@@ -28,7 +28,7 @@ public class ExponentiationTest {
 
     @Test(expected = ArithmeticException.class)
     public void zeroRaisedToNegative() {
-        runTest(0, -2);
+        calculate(0, -2);
     }
 
     @Test
@@ -47,10 +47,10 @@ public class ExponentiationTest {
     }
 
     private void runTest(int lhs, int rhs, int expected) {
-        assertEquals(expected, runTest(lhs, rhs));
+        assertEquals(expected, calculate(lhs, rhs));
     }
 
-    private int runTest(int lhs, int rhs) {
+    private int calculate(int lhs, int rhs) {
         RpnCalculator calc = new RpnCalculator();
         calc.enter(lhs);
         calc.enter(rhs);
