@@ -6,14 +6,14 @@ public class UnknownOperationTest {
     @Test(expected = IllegalArgumentException.class)
     public void unknownOperation() {
         RpnCalculator controller = new RpnCalculator();
-        controller.perform("?");
+        controller.perform( "?" );
         // expect error
     }
 
     @Test(expected = IllegalArgumentException.class)
     public void blankOperand() {
         RpnCalculator controller = new RpnCalculator();
-        controller.perform(null);
+        controller.perform( null );
         // expect error
     }
 }
