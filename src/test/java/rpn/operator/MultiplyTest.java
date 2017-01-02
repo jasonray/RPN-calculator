@@ -14,4 +14,12 @@ public class MultiplyTest {
         int result = calc.perform("*");
         assertEquals(result, 20);
     }
+
+    @Test
+    public void multiplyOneNumbers() {
+        RpnCalculator calc = new RpnCalculator();
+        calc.enter(4);
+        int result = calc.perform("*");
+        assertEquals(result, 0);
+    }
 }
