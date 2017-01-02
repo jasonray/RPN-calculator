@@ -25,17 +25,17 @@ public class FibonacciTest {
 
     @Test
     public void fib2() {
-        runTest(2, 1);
+        runTest(1, 2);
     }
 
     @Test
     public void fib3() {
-        runTest(3, 2);
+        runTest(2, 3);
     }
 
     @Test
     public void fib4() {
-        runTest(4, 3);
+        runTest(3, 4);
     }
 
     @Test
@@ -45,25 +45,25 @@ public class FibonacciTest {
 
     @Test
     public void fib6() {
-        runTest(6, 8);
+        runTest(8, 6);
     }
 
     @Test
     public void fib7() {
-        runTest(7, 13);
+        runTest(13, 7);
     }
 
     @Test
     public void fib30() {
-        runTest(30, 832040);
+        runTest(832040, 30);
     }
 
     @Test
     public void fib40() {
-        runTest(40, 102334155);
+        runTest(102334155, 40);
     }
 
-    private void runTest(int n, int expected) {
+    private void runTest(int expected, int n) {
         RpnCalculator calc = new RpnCalculator();
         calc.enter(n);
         int result = calc.perform("fib");
