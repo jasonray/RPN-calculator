@@ -1,9 +1,9 @@
 package rpn.operator;
 
-import static org.junit.Assert.assertEquals;
-
 import org.junit.Test;
 import rpn.RpnCalculator;
+
+import static org.junit.Assert.assertEquals;
 
 public class MultiplyTest {
     @Test
@@ -12,7 +12,7 @@ public class MultiplyTest {
         calc.enter(5);
         calc.enter(4);
         int result = calc.perform("*");
-        assertEquals(result, 20);
+        assertEquals(20, result);
     }
 
     @Test
@@ -20,13 +20,13 @@ public class MultiplyTest {
         RpnCalculator calc = new RpnCalculator();
         calc.enter(4);
         int result = calc.perform("*");
-        assertEquals(result, 0);
+        assertEquals(0, result);
     }
 
     @Test
     public void multiplyZeroNumbers() {
         RpnCalculator calc = new RpnCalculator();
         int result = calc.perform("*");
-        assertEquals(result, 0);
+        assertEquals(0, result);
     }
 }
