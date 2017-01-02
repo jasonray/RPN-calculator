@@ -22,4 +22,11 @@ public class MultiplyTest {
         int result = calc.perform("*");
         assertEquals(result, 0);
     }
+
+    @Test
+    public void multiplyZeroNumbers() {
+        RpnCalculator calc = new RpnCalculator();
+        int result = calc.perform("*");
+        assertEquals(result, 0);
+    }
 }
