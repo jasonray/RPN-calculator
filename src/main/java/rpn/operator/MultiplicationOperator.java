@@ -11,7 +11,7 @@ public class MultiplicationOperator extends BinaryOperator {
 
     @Override
     public boolean handlesOperatorCharacter(String operand) {
-        return MULTIPLY.contentEquals(operand);
+        return MULTIPLY.contentEquals( operand );
     }
 
 }

@@ -6,7 +6,7 @@ public class FibonacciOperator implements Operator {
     @Override
     public int doOperation(RpnStack numbers) {
         int n = numbers.pop();
-        return fib(n);
+        return fib( n );
     }
 
     private int fib(int n) {
@@ -32,7 +32,7 @@ public class FibonacciOperator implements Operator {
 
     @Override
     public boolean handlesOperatorCharacter(String operand) {
-        return "FIB".contentEquals(operand.toUpperCase()) || "FIBONACCI".contentEquals(operand.toUpperCase());
+        return "FIB".contentEquals( operand.toUpperCase() ) || "FIBONACCI".contentEquals( operand.toUpperCase() );
     }
 
 }

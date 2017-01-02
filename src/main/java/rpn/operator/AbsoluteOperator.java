@@ -7,8 +7,8 @@ public class AbsoluteOperator implements Operator {
     @Override
     public int doOperation(RpnStack numbers) {
         int n = numbers.pop();
-        int result = getAbsolute(n);
-        numbers.push(result);
+        int result = getAbsolute( n );
+        numbers.push( result );
         return result;
     }
 
@@ -25,7 +25,7 @@ public class AbsoluteOperator implements Operator {
 
     @Override
     public boolean handlesOperatorCharacter(String operand) {
-        return operand.contentEquals("||");
+        return operand.contentEquals( "||" );
     }
 
 }

@@ -11,7 +11,7 @@ public class DivisionOperator extends BinaryOperator {
 
     @Override
     public boolean handlesOperatorCharacter(String operand) {
-        return DIVIDE.contentEquals(operand);
+        return DIVIDE.contentEquals( operand );
     }
 
 }

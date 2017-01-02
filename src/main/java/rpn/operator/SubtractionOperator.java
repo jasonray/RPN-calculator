@@ -11,7 +11,7 @@ public class SubtractionOperator extends BinaryOperator {
 
     @Override
     public boolean handlesOperatorCharacter(String operand) {
-        return MINUS.contentEquals(operand);
+        return MINUS.contentEquals( operand );
     }
 
 }

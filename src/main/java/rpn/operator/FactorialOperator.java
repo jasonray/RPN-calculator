@@ -14,13 +14,13 @@ public class FactorialOperator implements Operator {
             total = total * operand;
             operand--;
         }
-        numbers.push(total);
+        numbers.push( total );
         return total;
     }
 
     @Override
     public boolean handlesOperatorCharacter(String operand) {
-        return FACTORIAL.contentEquals(operand);
+        return FACTORIAL.contentEquals( operand );
     }
 
 }

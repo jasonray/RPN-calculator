@@ -10,8 +10,8 @@ public abstract class BinaryOperator implements Operator {
         Integer rhs = numbers.pop();
         Integer lhs = numbers.pop();
 
-        result = doOperation(lhs, rhs);
-        numbers.push(result);
+        result = doOperation( lhs, rhs );
+        numbers.push( result );
         return result;
     }
 

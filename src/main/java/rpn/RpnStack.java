@@ -6,7 +6,7 @@ public class RpnStack {
     private Stack<Integer> stack = new Stack<Integer>();
 
     public void push(int n) {
-        stack.push(n);
+        stack.push( n );
     }
 
     public int pop() {

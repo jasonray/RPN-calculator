@@ -6,7 +6,7 @@ public class ExponentiationOperator extends BinaryOperator {
 
     @Override
     public boolean handlesOperatorCharacter(String operand) {
-        return POWER.contentEquals(operand);
+        return POWER.contentEquals( operand );
     }
 
     @Override
@@ -16,7 +16,7 @@ public class ExponentiationOperator extends BinaryOperator {
             for (int i = 0; i < rhs; i++)
                 product = product * lhs;
         else if (rhs < 0)
-            product = 1 / doOperation(lhs, -1 * rhs);
+            product = 1 / doOperation( lhs, -1 * rhs );
         return product;
     }
 

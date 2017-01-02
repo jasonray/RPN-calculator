@@ -16,13 +16,13 @@ public class AverageOperator implements Operator {
         if (runningCount > 0) {
             ave = runningTotal / runningCount;
         }
-        numbers.push(ave);
+        numbers.push( ave );
         return ave;
     }
 
     @Override
     public boolean handlesOperatorCharacter(String operand) {
-        return "AVERAGE".contentEquals(operand.toUpperCase()) || "AVE".contentEquals(operand.toUpperCase());
+        return "AVERAGE".contentEquals( operand.toUpperCase() ) || "AVE".contentEquals( operand.toUpperCase() );
 
     }
 
