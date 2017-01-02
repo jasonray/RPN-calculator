@@ -19,7 +19,7 @@ public class AbsoluteTest {
 
     @Test
     public void negOne() {
-        runTest(-1, 1);
+        runTest(1, -1);
     }
 
     @Test
@@ -29,7 +29,7 @@ public class AbsoluteTest {
 
     @Test
     public void negTwo() {
-        runTest(-2, 2);
+        runTest(2, -2);
     }
 
     @Test
@@ -39,7 +39,7 @@ public class AbsoluteTest {
         assertEquals(0, result);
     }
 
-    private void runTest(int n, int expected) {
+    private void runTest(int expected, int n) {
         RpnCalculator calc = new RpnCalculator();
         calc.enter(n);
         int result = calc.perform("||");
