@@ -9,24 +9,24 @@ public class MultiplyTest {
     @Test
     public void multiplyTwoNumbers() {
         RpnCalculator calc = new RpnCalculator();
-        calc.enter(5);
-        calc.enter(4);
-        int result = calc.perform("*");
-        assertEquals(20, result);
+        calc.enter( 5 );
+        calc.enter( 4 );
+        int result = calc.perform( "*" );
+        assertEquals( 20, result );
     }
 
     @Test
     public void multiplyOneNumbers() {
         RpnCalculator calc = new RpnCalculator();
-        calc.enter(4);
-        int result = calc.perform("*");
-        assertEquals(0, result);
+        calc.enter( 4 );
+        int result = calc.perform( "*" );
+        assertEquals( 0, result );
     }
 
     @Test
     public void multiplyZeroNumbers() {
         RpnCalculator calc = new RpnCalculator();
-        int result = calc.perform("*");
-        assertEquals(0, result);
+        int result = calc.perform( "*" );
+        assertEquals( 0, result );
     }
 }
