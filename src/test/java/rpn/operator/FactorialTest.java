@@ -1,8 +1,9 @@
-package rpn;
+package rpn.operator;
 
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
+import rpn.RpnCalculator;
 
 public class FactorialTest {
 
