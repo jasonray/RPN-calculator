@@ -1,4 +1,5 @@
-RPN calculator [![Codacy Badge](https://api.codacy.com/project/badge/Grade/27bc341af2dc449dad2dbfc90bffa329)](https://www.codacy.com/manual/jasonray/RPN-calculator?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jasonray/RPN-calculator&amp;utm_campaign=Badge_Grade)
+# RPN calculator 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/27bc341af2dc449dad2dbfc90bffa329)](https://www.codacy.com/manual/jasonray/RPN-calculator?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jasonray/RPN-calculator&amp;utm_campaign=Badge_Grade)
 
 This exercise was used during a coding kata.
 
