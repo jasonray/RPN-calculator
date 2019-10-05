@@ -33,15 +33,26 @@ gradle test
 
 A sample base implementation for addition is shown below:
 
-FIX THIS FOR JAVA
 ``` java
-module.exports = function(numbers) {
-	var rhs = numbers.pop();
-	var lhs = numbers.pop();
-	var result = lhs + rhs;
-	numbers.push(result);
-	return result;
-};
+public class AdditionOperator implements Operator {
+
+    private static final String PLUS = "+";
+
+    @Override
+    public int doOperation(RpnStack numbers) {
+        int rhs = numbers.pop();
+        int lhs = numbers.pop();
+        int result = rhs + lhs;
+        numbers.push(result);
+        return result;
+    }
+
+    @Override
+    public boolean handlesOperatorCharacter(String operand) {
+        return PLUS.contentEquals( operand );
+    }
+
+}
 ```
 
 3) Register operator in `OperatorRegistry`.  To do this, add the following statement: 
