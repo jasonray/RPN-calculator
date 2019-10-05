@@ -10,7 +10,7 @@ public class ForceFailTest {
     @Test
     @Ignore
     public void forceFail() {
-        fail( "force fail to see issue with CI process" );
+        fail("force fail to see issue with CI process");
     }
 
 }
