@@ -12,4 +12,11 @@ public class MaxTest {
         int result = calc.perform("max");
         assertEquals(0, result);
     }
+    @Test
+    public void maxOnSingle() {
+        RpnCalculator calc = new RpnCalculator();
+        calc.enter(1);
+        int result = calc.perform("max");
+        assertEquals(1, result);
+    }
 }
