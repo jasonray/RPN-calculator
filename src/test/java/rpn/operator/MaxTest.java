@@ -46,4 +46,17 @@ public class MaxTest {
         int result = calc.perform("max");
         assertEquals(2, result);
     }
+
+    @Test
+    public void maxSeveralNumbers() {
+        RpnCalculator calc = new RpnCalculator();
+        calc.enter(2);
+        calc.enter(1);
+        calc.enter(3);
+        calc.enter(4);
+        calc.enter(5);
+        calc.enter(-1);
+        int result = calc.perform("max");
+        assertEquals(5, result);
+    }
 }
