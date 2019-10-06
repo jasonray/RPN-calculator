@@ -13,4 +13,10 @@ public class DoubleTest {
         int result = calc.perform( "double" );
         assertEquals( 8, result );
     }
+    @Test
+    public void doubleNothing() {
+        RpnCalculator calc = new RpnCalculator();
+        int result = calc.perform( "double" );
+        assertEquals( 0, result );
+    }
 }
