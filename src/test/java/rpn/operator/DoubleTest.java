@@ -26,4 +26,12 @@ public class DoubleTest {
         int result = calc.perform( "double" );
         assertEquals( 8, calc.peek() );
     }
+    @Test
+    public void executeDoubleTwice() {
+        RpnCalculator calc = new RpnCalculator();
+        calc.enter(4);
+        calc.perform( "double" );
+        calc.perform( "double" );
+        assertEquals( 16, calc.peek() );
+    }
 }
