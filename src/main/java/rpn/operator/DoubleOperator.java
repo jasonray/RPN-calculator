@@ -7,7 +7,10 @@ public class DoubleOperator implements Operator {
 
     @Override
     public int doOperation(RpnStack numbers) {
-        return 0;
+        int operand = numbers.pop();
+        int result = operand * 2;
+        numbers.push(result);
+        return result;
     }
 
     @Override
