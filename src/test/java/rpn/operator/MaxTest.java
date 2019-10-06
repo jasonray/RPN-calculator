@@ -12,6 +12,7 @@ public class MaxTest {
         int result = calc.perform("max");
         assertEquals(0, result);
     }
+
     @Test
     public void maxOnSingle() {
         RpnCalculator calc = new RpnCalculator();
@@ -19,6 +20,7 @@ public class MaxTest {
         int result = calc.perform("max");
         assertEquals(1, result);
     }
+
     @Test
     public void maxOnSingleNegative() {
         RpnCalculator calc = new RpnCalculator();
@@ -26,6 +28,7 @@ public class MaxTest {
         int result = calc.perform("max");
         assertEquals(-1, result);
     }
+
     @Test
     public void maxOnTwoLowThenHigh() {
         RpnCalculator calc = new RpnCalculator();
@@ -34,6 +37,7 @@ public class MaxTest {
         int result = calc.perform("max");
         assertEquals(2, result);
     }
+
     @Test
     public void maxOnTwoHighThenLow() {
         RpnCalculator calc = new RpnCalculator();
