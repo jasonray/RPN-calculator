@@ -59,4 +59,16 @@ public class MaxTest {
         int result = calc.perform("max");
         assertEquals(5, result);
     }
+
+    @Test
+    public void maxSeveralNegativeNumbers() {
+        RpnCalculator calc = new RpnCalculator();
+        calc.enter(-2);
+        calc.enter(-1);
+        calc.enter(-3);
+        calc.enter(-4);
+        calc.enter(-5);
+        int result = calc.perform("max");
+        assertEquals(-1, result);
+    }
 }
