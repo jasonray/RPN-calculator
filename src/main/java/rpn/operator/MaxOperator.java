@@ -19,6 +19,8 @@ public class MaxOperator implements Operator {
                 maxValue = currentValue;
             }
         }
+
+        numbers.push(maxValue);
         return maxValue;
     }
 
