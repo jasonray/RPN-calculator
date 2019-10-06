@@ -19,4 +19,11 @@ public class DoubleTest {
         int result = calc.perform( "double" );
         assertEquals( 0, result );
     }
+    @Test
+    public void doulbePutsResultOnStack() {
+        RpnCalculator calc = new RpnCalculator();
+        calc.enter(4);
+        int result = calc.perform( "double" );
+        assertEquals( 4, calc.peek() );
+    }
 }
