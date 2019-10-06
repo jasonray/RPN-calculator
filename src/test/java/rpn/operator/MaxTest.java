@@ -10,6 +10,6 @@ public class MaxTest {
     public void maxOnEmpty() {
         RpnCalculator calc = new RpnCalculator();
         int result = calc.perform("max");
-        assertEquals(1, result);
+        assertEquals(0, result);
     }
 }
