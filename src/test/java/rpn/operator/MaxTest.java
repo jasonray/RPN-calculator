@@ -19,4 +19,20 @@ public class MaxTest {
         int result = calc.perform("max");
         assertEquals(1, result);
     }
+    @Test
+    public void maxOnTwoLowThenHigh() {
+        RpnCalculator calc = new RpnCalculator();
+        calc.enter(1);
+        calc.enter(2);
+        int result = calc.perform("max");
+        assertEquals(2, result);
+    }
+    @Test
+    public void maxOnTwoHighThenLow() {
+        RpnCalculator calc = new RpnCalculator();
+        calc.enter(2);
+        calc.enter(1);
+        int result = calc.perform("max");
+        assertEquals(2, result);
+    }
 }
