@@ -34,8 +34,8 @@ public class DoubleTest {
         RpnCalculator calc = new RpnCalculator();
         calc.enter(4);
         calc.perform("double");
-        calc.perform("double");
-        assertEquals(16, calc.peek());
+        int result = calc.perform("double");
+        assertEquals(16, result);
     }
 
     @Test
