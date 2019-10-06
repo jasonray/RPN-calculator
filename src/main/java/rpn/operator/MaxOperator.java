@@ -5,7 +5,15 @@ import rpn.RpnStack;
 public class MaxOperator implements Operator {
     @Override
     public int doOperation(RpnStack numbers) {
-        return 0;
+        int maxValue = 0;
+
+         while (!numbers.isEmpty()) {
+            int currentValue = numbers.pop();
+            if (currentValue>maxValue) {
+                maxValue = currentValue;
+            }
+        }
+        return maxValue;
     }
 
     @Override
