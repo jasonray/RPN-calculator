@@ -19,4 +19,8 @@ public class RpnCalculator {
         return result;
     }
 
+    public int peek() {
+        return numbers.peek();
+    }
+
 }
