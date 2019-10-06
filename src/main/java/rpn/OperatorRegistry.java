@@ -8,6 +8,7 @@ import rpn.operator.DivisionOperator;
 import rpn.operator.ExponentiationOperator;
 import rpn.operator.FactorialOperator;
 import rpn.operator.FibonacciOperator;
+import rpn.operator.MaxOperator;
 import rpn.operator.MinOperator;
 import rpn.operator.MultiplicationOperator;
 import rpn.operator.Operator;
@@ -35,6 +36,7 @@ public class OperatorRegistry {
         operatorRegistry.add( new ExponentiationOperator() );
         operatorRegistry.add( new AbsoluteOperator() );
         operatorRegistry.add( new FibonacciOperator() );
+        operatorRegistry.add( new MaxOperator() );
         operatorRegistry.add( new MinOperator() );
         return operatorRegistry;
     }
