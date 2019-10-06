@@ -34,4 +34,12 @@ public class DoubleTest {
         calc.perform( "double" );
         assertEquals( 16, calc.peek() );
     }
+    @Test
+    public void doubleOnNegative() {
+        RpnCalculator calc = new RpnCalculator();
+        calc.enter(4);
+         calc.perform( "double" );
+        int result = calc.perform( "double" );
+        assertEquals( 16, result );
+    }
 }
