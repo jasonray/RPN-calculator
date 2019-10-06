@@ -22,7 +22,7 @@ public class DoubleTest {
     }
 
     @Test
-    public void doulbePutsResultOnStack() {
+    public void doublePutsResultOnStack() {
         RpnCalculator calc = new RpnCalculator();
         calc.enter(4);
         int result = calc.perform("double");
