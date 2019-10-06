@@ -5,6 +5,7 @@ import rpn.operator.AdditionOperator;
 import rpn.operator.AverageOperator;
 import rpn.operator.ClearOperator;
 import rpn.operator.DivisionOperator;
+import rpn.operator.DoubleOperator;
 import rpn.operator.ExponentiationOperator;
 import rpn.operator.FactorialOperator;
 import rpn.operator.FibonacciOperator;
@@ -36,6 +37,7 @@ public class OperatorRegistry {
         operatorRegistry.add( new ExponentiationOperator() );
         operatorRegistry.add( new AbsoluteOperator() );
         operatorRegistry.add( new FibonacciOperator() );
+        operatorRegistry.add( new DoubleOperator() );
         operatorRegistry.add( new MaxOperator() );
         operatorRegistry.add( new MinOperator() );
         return operatorRegistry;
