@@ -7,9 +7,9 @@ public class MaxOperator implements Operator {
     public int doOperation(RpnStack numbers) {
         int maxValue = 0;
 
-         while (!numbers.isEmpty()) {
+        while (!numbers.isEmpty()) {
             int currentValue = numbers.pop();
-            if (currentValue>maxValue) {
+            if (currentValue > maxValue) {
                 maxValue = currentValue;
             }
         }
@@ -18,6 +18,6 @@ public class MaxOperator implements Operator {
 
     @Override
     public boolean handlesOperatorCharacter(String operand) {
-        return operand.contentEquals( "max" );
+        return operand.contentEquals("max");
     }
 }
