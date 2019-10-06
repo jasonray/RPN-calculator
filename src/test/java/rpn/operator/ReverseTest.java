@@ -1,10 +1,11 @@
-package rpn;
+package rpn.operator;
 
 import org.junit.Test;
+import rpn.RpnCalculator;
 
 import static org.junit.Assert.assertEquals;
 
-public class ReverseStackTest {
+public class ReverseTest {
 
     @Test
     public void reverseTwoNumbers() {
