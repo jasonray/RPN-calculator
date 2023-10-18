@@ -7,6 +7,7 @@ I have done three variations of the RPN calculator as exploratory into languages
 -   [java](https://github.com/jasonray/RPN-calculator) 
 -   [scala](https://github.com/jasonray/RPN-calculator-scala)
 -   [javascript / node.js](https://github.com/jasonray/RPN-calculator-node)
+-   [python](https://github.com/jasonray/RPN-calculator-python)
 
 ## How to run
 This implementation utilizes Java and Gradle.
